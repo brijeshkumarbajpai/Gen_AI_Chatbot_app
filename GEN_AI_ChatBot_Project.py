@@ -14,8 +14,7 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.vectorstores import FAISS
 import os
 
-HF_TOKEN="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"
-Groq_API_Key="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"
+
 os.environ['HF_TOKEN']=os.getenv("HF_TOKEN")
 os.environ["Groq_API_Key"]=os.getenv("Groq_API_Key")
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
