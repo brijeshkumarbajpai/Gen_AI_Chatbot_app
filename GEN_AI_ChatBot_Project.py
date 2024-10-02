@@ -16,8 +16,8 @@ import os
 
 HF_TOKEN="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"
 Groq_API_Key="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"
-LANGCHAIN_API_KEY="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"
-LANGCHAIN_PROJECT="My__Gen_AI_Chatbot_APP"
+os.environ['HF_TOKEN']=os.getenv("HF_TOKEN")
+os.environ["Groq_API_Key"]=os.getenv("Groq_API_Key")
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
 ## set up Streamlit 
