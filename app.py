@@ -14,13 +14,13 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.vectorstores import FAISS
 import os
 
+os.environ['HF_TOKEN']=os.getenv("HF_TOKEN")
+os.environ["Groq_API_Key"]=os.getenv("Groq_API_Key")
 
-LANGCHAIN_API_KEY="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"
-LANGCHAIN_PROJECT="My__Gen_AI_Chatbot_APP"
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
 ## set up Streamlit 
-st.title("Hi, I am Helplio!\nHow can I help you?")
+st.title("Hi, I am Askora!\nHow can I help you?")
 # st.write("Please upload Pdf's")
 
 llm=ChatGroq(groq_api_key=Groq_API_Key,model_name="Gemma2-9b-It")
